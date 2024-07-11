@@ -35,7 +35,7 @@ print(selectedPasswords)
 class GroqAPI:
 
     def __init__(self, model_name: str):
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        self.client = Groq(api_key=st.secrets["GROQ_API_KEY])
         self.model_name = model_name
 
     # Internal method to fetch responses from the Groq API
