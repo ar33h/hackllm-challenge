@@ -48,7 +48,7 @@ with col1:
                     st.toast("Server Error...", icon="❓")
 
 with col2:
-    st.image("emoji\point.png", width=205)
+    st.image("emoji/point.png", width=205)
 
 hide_streamlit_style = """
             <style>
