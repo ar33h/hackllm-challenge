@@ -24,7 +24,7 @@ st.markdown(
 col1, col2 = st.columns([0.3, 0.7])
 
 with col1:
-    st.image("emoji\happy.png", width=205)
+    st.image("emoji/happy.png", width=205)
 
 with col2:
     st.header("Thanks for participating!", divider="grey")
