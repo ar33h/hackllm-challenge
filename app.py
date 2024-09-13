@@ -56,6 +56,7 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 hide_img_fs = '''
 <style>
 button[title="View fullscreen"]{
