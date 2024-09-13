@@ -1,8 +1,6 @@
 # HackLLM Prompt Injection Challenge
-Coming Soon!
 
-## About the Challenge
-- **Coming Soon**: Lorem Ipsum
+Outsmart the AI Chatbot by creating clever prompts and make it reveal each level's password.
 
 ## Configuration
 ### Obtaining Groq API Key

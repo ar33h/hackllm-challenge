@@ -20,6 +20,13 @@ st.markdown(
 """,
     unsafe_allow_html=True,
 )
+hide_img_fs = '''
+<style>
+button[title="View fullscreen"]{
+    visibility: hidden;}
+</style>
+'''
+st.markdown(hide_img_fs, unsafe_allow_html=True)
 
 col1, col2 = st.columns([0.3, 0.7])
 
@@ -27,16 +34,28 @@ with col1:
     st.image("emoji/happy.png", width=205)
 
 with col2:
-    st.header("Thanks for participating!", divider="grey")
-    st.subheader("Results coming up on the big screen...")
-    st.code("Learn more about AI Prompt Injection: \n [-] https://youtu.be/fP6vRNkNEt0")
+    st.header("You did it, "+st.session_state["name"]+"!", divider="grey")
+    st.subheader("Thanks for participating. You can collect free swags from our table.")
     st.code("Pace University Career Services: \n [-] https://careerservices.pace.edu/")
-    st.code("Have a cool AI Project Idea? Drop a Message: \n [-] https://www.linkedin.com/in/ar33h/ ")
+    st.code("More on AI Prompt Injection: \n [-] https://youtu.be/fP6vRNkNEt0")
+    
 
 st.write("")
 st.write("")
 
-left, center, right = st.columns([0.42, 0.3, 0.3])
+st.markdown(
+    """
+    <style>
+        div[data-testid="column"]:nth-of-type(2)
+        {
+            text-align: center;
+        } 
+    </style>
+    """,unsafe_allow_html=True
+)
+
+left, center, right = st.columns([0.42, 0.4, 0.3])
 with center:
     portfolio= "http://arshdeepsingh.me"
+    st.write("#SeidenbergCommunityDay2024")
     st.caption('built with :blue_heart: by [arsh](%s)' %portfolio)

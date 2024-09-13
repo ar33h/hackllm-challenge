@@ -64,10 +64,22 @@ button[title="View fullscreen"]{
 '''
 st.markdown(hide_img_fs, unsafe_allow_html=True)
 
-left, center, right = st.columns([0.42, 0.3, 0.3])
+st.markdown(
+    """
+    <style>
+        div[data-testid="column"]:nth-of-type(2)
+        {
+            text-align: center;
+        } 
+    </style>
+    """,unsafe_allow_html=True
+)
+left, center, right = st.columns([0.42, 0.4, 0.3])
 with center:
     portfolio= "http://arshdeepsingh.me"
+    st.write("#SeidenbergCommunityDay2024")
     st.caption('built with :blue_heart: by [arsh](%s)' %portfolio)
+
 
 
 #-------------------Caching Passwords----------------------
@@ -114,7 +126,7 @@ passwords = [
 
 @st.cache_data
 def randPass():
-    selectedPasswords = (random.sample(passwords, 5))
+    selectedPasswords = (random.sample(passwords, 4))
     return selectedPasswords
 
 st.session_state["keys"] = randPass()
