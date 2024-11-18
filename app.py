@@ -29,7 +29,7 @@ with col1:
         first_name = st.text_input('First Name: ')
         st.session_state["name"] = first_name
         last_name = st.text_input('Last Name: ')
-        email = st.text_input('Email', '@pace.edu')
+        email = st.text_input('Email')
         
         submitted = st.form_submit_button("Submit")
         if submitted:
@@ -78,7 +78,7 @@ st.markdown(
 left, center, right = st.columns([0.42, 0.4, 0.3])
 with center:
     portfolio= "http://arshdeepsingh.me"
-    st.write("#SeidenbergCommunityDay2024")
+    # st.write("#SeidenbergCommunityDay2024")
     st.caption('built with :blue_heart: by [arsh](%s)' %portfolio)
 
 
